@@ -30,7 +30,6 @@ const app = new Vue ({
             },
         ],
     },
-
     methods:{
         prevImg(){
             if(this.currentIndexImg === 0){
@@ -46,6 +45,9 @@ const app = new Vue ({
             }else{
                 this.currentIndexImg++;
             }
+        },
+        changeImg(newindex){
+            this.currentIndexImg = newindex;
         }
     }
 

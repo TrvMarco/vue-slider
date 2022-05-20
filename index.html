@@ -21,13 +21,13 @@
         
         </div>
         <div class="thumbs">
-            <div class="prev"  @click="prevImg()"></div>
+            <div class="prev" @click="prevImg()"></div>
 
-            <div v-for="img in images" class="thumb">
+            <div v-for="(img,index) in images" :class="{active: currentIndexImg === index}" class="thumb" @click="changeImg(index)">
                 <img :src="img.src" :alt="img.title">
             </div> 
             
-            <div class="next"  @click="nextImg()"></div>
+            <div class="next" @click="nextImg()"></div>
         </div>
    </div>
 
